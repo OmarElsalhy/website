@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background: #01031e;
+}
+
+
+.background {
+    width: 100%;
+    height: 100vh;
+    background: url('football-stadium-stadium-manchester-united-wallpaper-preview.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+}
+
+.container {
+    position: absolute;
+    width: 75%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 550px;
+    background: url('football-stadium-stadium-manchester-united-wallpaper-preview.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 13px;
+    margin-top: 20px;
+    box-shadow: 0 0 18px black;
+}
+
+.container .content {
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 80px;
+    color: #e4e4e4;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.container .logbox {
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.content h2 {
+
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+
+.content h3 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 15px;
+    margin: 20px 0;
+}
+
+.content .name {
+    font-size: 25px;
+}
+
+.social-icons a i {
+    font-size: 25px;
+    color: #e4e4e4;
+    margin-right: 15px;
+}
+
+.logbox .form-box {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+    color: #e4e4e4;
+    box-shadow: 0 0 8px black;
+}
+
+.form-box h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.form-box .input-box {
+    position: relative;
+    width: 330px;
+    height: 50px;
+    border-bottom: 3px solid #e4e4e4;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: #e4e4e4;
+    font-weight: 400;
+    padding-right: 30px;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 15px;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.5s ease;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -6px;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 0;
+    top: 13px;
+    font-size: 20px;
+}
+
+.form-box .remember-forgot {
+    font-size: 15px;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.remember-forgot label input {
+    accent-color: #e4e4e4;
+}
+
+.form-box .remember-forgot a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+    color: rgb(76, 127, 127);
+}
+
+
+.but {
+    width: 100%;
+    height: 47px;
+    background: brown;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #e4e4e4;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.but:hover {
+    background: #e4e4e4;
+    color: #01031e;
+    box-shadow: 0 0 13px black;
+}
+
+.form-box .register-link,
+.login-link {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.register-link,
+.login-link p a {
+    color: whitesmoke;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+    color: rgb(76, 127, 127);
+
+}
+
+
+
+.login-link p a:hover {
+    text-decoration: underline;
+    color: rgb(76, 127, 127);
+}
+
+.logbox .form-box.login {
+    transform: translateX(0);
+    transition: .7s ease;
+    transition-delay: 0.6s;
+}
+
+
+.logbox.active .form-box.login {
+    transform: translateX(450px);
+    transition-delay: 0s;
+}
+
+.logbox .form-box.register {
+    transform: translateX(470px);
+    transition: .6s ease;
+    transition-delay: 0s;
+}
+
+.logbox.active .form-box.register {
+    transform: translateX(0);
+    transition-delay: 0.5s;
+}
